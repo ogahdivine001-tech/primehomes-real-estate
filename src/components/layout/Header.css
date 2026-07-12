@@ -11,8 +11,11 @@
   height: var(--header-height);
   display: flex;
   align-items: center;
-  transition: background var(--transition-base), box-shadow var(--transition-base),
-    backdrop-filter var(--transition-base), height var(--transition-base);
+  transition:
+    background var(--transition-base),
+    box-shadow var(--transition-base),
+    backdrop-filter var(--transition-base),
+    height var(--transition-base);
   background: transparent;
 }
 
@@ -90,7 +93,7 @@
 }
 
 .header__nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -4px;
@@ -127,7 +130,10 @@
   color: var(--color-white);
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  transition: background var(--transition-fast), transform var(--transition-fast), color var(--transition-fast);
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast),
+    color var(--transition-fast);
   font-size: 1rem;
 }
 
@@ -160,7 +166,9 @@
   font-size: 0.9rem;
   white-space: nowrap;
   box-shadow: var(--shadow-gold);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .header__cta:hover {
@@ -217,12 +225,20 @@
   width: 100%;
   background: var(--color-white);
   border-radius: 2px;
-  transition: transform var(--transition-fast), opacity var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    opacity var(--transition-fast);
 }
 
-.header__burger--open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.header__burger--open span:nth-child(2) { opacity: 0; }
-.header__burger--open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.header__burger--open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.header__burger--open span:nth-child(2) {
+  opacity: 0;
+}
+.header__burger--open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
 
 /* ---- Mobile menu overlay ---- */
 .mobile-menu {
@@ -265,7 +281,7 @@
   .header__nav {
     display: none;
   }
-  .header__call {
+  .header__actions {
     display: none;
   }
 }
