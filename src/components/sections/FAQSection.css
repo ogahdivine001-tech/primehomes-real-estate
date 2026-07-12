@@ -1,0 +1,12 @@
+/* ==========================================================================
+   FAQSection — homepage FAQ section
+   ========================================================================== */
+
+.faq-section .container {
+  max-width: 820px;
+}
+
+.faq-section__footer {
+  text-align: center;
+  margin-top: var(--space-lg);
+}

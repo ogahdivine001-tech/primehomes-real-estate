@@ -1,0 +1,165 @@
+/* ==========================================================================
+   About page — full company story page
+   ========================================================================== */
+
+.about-page__hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  background-image:
+    linear-gradient(180deg, rgba(13, 27, 42, 0.6) 0%, rgba(13, 27, 42, 0.85) 100%),
+    url('/src/assets/images/about-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-primary);
+}
+
+.about-page__hero .container {
+  padding-top: var(--header-height);
+  text-align: center;
+}
+
+.about-page__hero h1 {
+  color: var(--color-white);
+  max-width: 720px;
+  margin-inline: auto;
+  margin-bottom: var(--space-sm);
+}
+
+.about-page__hero p {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin-inline: auto;
+  font-size: 1.05rem;
+}
+
+/* ---- Story ---- */
+.about-page__story {
+  max-width: 780px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.about-page__story p {
+  color: var(--color-text-muted);
+  line-height: 1.85;
+  margin-bottom: var(--space-md);
+  font-size: 1.05rem;
+}
+
+/* ---- Values ---- */
+.about-page__values {
+  background: var(--color-accent);
+}
+
+.about-page__values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+
+.value-card {
+  text-align: center;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base);
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+}
+
+.value-card__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-inline: auto;
+  margin-bottom: var(--space-sm);
+}
+
+.value-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.value-card p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* ---- Timeline ---- */
+.timeline {
+  position: relative;
+  max-width: 760px;
+  margin-inline: auto;
+  padding-left: var(--space-lg);
+  border-left: 2px solid var(--color-border);
+}
+
+.timeline__item {
+  position: relative;
+  padding-bottom: var(--space-xl);
+}
+
+.timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline__item::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--space-lg) - 7px);
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  border: 3px solid var(--color-white);
+  box-shadow: 0 0 0 2px var(--color-gold);
+}
+
+.timeline__year {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-gold);
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.timeline__item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.timeline__item p {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+/* ---- Team preview CTA ---- */
+.about-page__team-cta {
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .about-page__values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .about-page__values-grid {
+    grid-template-columns: 1fr;
+  }
+}

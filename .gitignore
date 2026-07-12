@@ -1,0 +1,9 @@
+node_modules
+dist
+.DS_Store
+*.local
+.env
+
+studio/.sanity
+
+src/assets/videos/*.mp4

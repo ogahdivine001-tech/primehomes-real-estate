@@ -1,0 +1,236 @@
+/* ==========================================================================
+   Hero — Fullscreen luxury hero section
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--color-primary);
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(13, 27, 42, 0.55) 0%,
+      rgba(13, 27, 42, 0.65) 45%,
+      rgba(13, 27, 42, 0.95) 100%
+    ),
+    url("/src/assets/images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  /* Subtle luxury fallback gradient shows even before/without a real photo */
+  background-color: var(--color-primary);
+}
+
+.hero__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at top right,
+    rgba(200, 169, 106, 0.18),
+    transparent 60%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+  padding-top: var(--header-height);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-gold);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+}
+
+.hero__eyebrow::before,
+.hero__eyebrow::after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+.hero__title {
+  color: var(--color-white);
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  line-height: 1.1;
+  max-width: 900px;
+  margin-bottom: var(--space-md);
+}
+
+.hero__title span {
+  color: var(--color-gold);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.hero__subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.15rem;
+  max-width: 620px;
+  margin-bottom: var(--space-lg);
+}
+
+.hero__cta-group {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: var(--space-2xl);
+}
+
+/* ---- Compact search bar (glassmorphism) ---- */
+.hero__search {
+  width: 100%;
+  max-width: 980px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-lg);
+  padding: var(--space-sm);
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr auto;
+  gap: 0.75rem;
+}
+
+.hero__search-field {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0.4rem 1rem;
+  border-right: 1px solid rgba(13, 27, 42, 0.1);
+}
+
+.hero__search-field:last-of-type {
+  border-right: none;
+}
+
+.hero__search-field label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.hero__search-field select,
+.hero__search-field input {
+  border: none;
+  background: transparent;
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--color-primary);
+  font-size: 0.95rem;
+}
+
+.hero__search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--color-gold);
+  color: var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: 0 1.75rem;
+  font-weight: 600;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.hero__search-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+/* ---- Scroll indicator ---- */
+.hero__scroll {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero__scroll-icon {
+  width: 26px;
+  height: 42px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-full);
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+.hero__scroll-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  animation: floatY 1.6s ease-in-out infinite;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .hero__search {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero__search-btn {
+    grid-column: span 2;
+    padding: 0.9rem;
+  }
+  .hero__search-field {
+    border-right: none;
+    border-bottom: 1px solid rgba(13, 27, 42, 0.1);
+  }
+}
+
+@media (max-width: 560px) {
+  .hero__search {
+    grid-template-columns: 1fr;
+  }
+  .hero__search-btn {
+    grid-column: span 1;
+  }
+  .hero__cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+}

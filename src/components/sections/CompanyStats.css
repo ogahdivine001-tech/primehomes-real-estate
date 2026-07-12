@@ -1,0 +1,22 @@
+/* ==========================================================================
+   CompanyStats — dark navy band housing the animated counters
+   ========================================================================== */
+
+.company-stats {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.company-stats::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(200, 169, 106, 0.08), transparent 50%);
+  pointer-events: none;
+}
+
+.company-stats .container {
+  position: relative;
+  z-index: 1;
+}

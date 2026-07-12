@@ -1,0 +1,145 @@
+/* ==========================================================================
+   AboutCompany — homepage "who we are" section
+   ========================================================================== */
+
+.about-company .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+/* ---- Image side ---- */
+.about-company__media {
+  position: relative;
+}
+
+.about-company__img-main {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4 / 5;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+}
+
+.about-company__img-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-company__badge {
+  position: absolute;
+  bottom: -30px;
+  right: -20px;
+  background: var(--color-gold);
+  color: var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  box-shadow: var(--shadow-gold);
+  text-align: center;
+  min-width: 160px;
+}
+
+.about-company__badge-number {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.about-company__badge-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: 0.3rem;
+}
+
+/* ---- Content side ---- */
+.about-company__highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm) var(--space-md);
+  margin-block: var(--space-lg);
+}
+
+.about-company__highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.about-company__highlight i {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(200, 169, 106, 0.15);
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.about-company__highlight-text strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--color-primary);
+}
+
+.about-company__highlight-text span {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.about-company__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.about-company__signature {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.about-company__signature img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-company__signature strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+}
+
+.about-company__signature span {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 900px) {
+  .about-company .container {
+    grid-template-columns: 1fr;
+  }
+  .about-company__media {
+    max-width: 420px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-company__highlights {
+    grid-template-columns: 1fr;
+  }
+  .about-company__badge {
+    right: 10px;
+  }
+}

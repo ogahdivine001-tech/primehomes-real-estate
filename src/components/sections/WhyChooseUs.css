@@ -1,0 +1,86 @@
+/* ==========================================================================
+   WhyChooseUs — icon feature card grid
+   ========================================================================== */
+
+.why-choose-us {
+  background: var(--color-accent);
+}
+
+.why-choose-us__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.why-choose-us__card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.why-choose-us__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--color-gold);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform var(--transition-base);
+}
+
+.why-choose-us__card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.why-choose-us__card:hover::before {
+  transform: scaleY(1);
+}
+
+.why-choose-us__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: var(--space-md);
+  transition: transform var(--transition-base);
+}
+
+.why-choose-us__card:hover .why-choose-us__icon {
+  transform: rotate(-8deg) scale(1.05);
+}
+
+.why-choose-us__card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.why-choose-us__card p {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 1024px) {
+  .why-choose-us__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .why-choose-us__grid {
+    grid-template-columns: 1fr;
+  }
+}

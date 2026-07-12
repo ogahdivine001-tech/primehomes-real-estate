@@ -1,0 +1,22 @@
+/* ==========================================================================
+   FeaturedProperties — homepage section
+   ========================================================================== */
+
+.featured-properties__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.featured-properties__header .section-title {
+  margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .featured-properties__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,103 @@
+/* ==========================================================================
+   FeaturedLocations — mosaic grid of city spotlights
+   ========================================================================== */
+
+.featured-locations__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 220px;
+  gap: var(--space-md);
+}
+
+.location-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.location-card--large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.location-card__img {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+}
+
+.location-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-luxury);
+}
+
+.location-card:hover .location-card__img img {
+  transform: scale(1.1);
+}
+
+.location-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(13, 27, 42, 0) 40%, rgba(13, 27, 42, 0.85) 100%);
+}
+
+.location-card__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-md);
+  color: var(--color-white);
+}
+
+.location-card__content h3 {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.location-card--large .location-card__content h3 {
+  font-size: 1.6rem;
+}
+
+.location-card__content span {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.location-card__count {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-full);
+}
+
+@media (max-width: 1024px) {
+  .featured-locations__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+  }
+  .location-card--large {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .featured-locations__grid {
+    grid-template-columns: 1fr;
+  }
+  .location-card--large {
+    grid-column: span 1;
+  }
+}

@@ -1,0 +1,103 @@
+/* ==========================================================================
+   Contact page — dedicated full contact experience
+   ========================================================================== */
+
+.contact-page__hero {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  padding-block: calc(var(--header-height) + var(--space-lg)) var(--space-xl);
+  text-align: center;
+}
+
+.contact-page__hero h1 {
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+}
+
+.contact-page__hero p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ---- Office cards ---- */
+.contact-page__offices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.office-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.office-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.office-card__label {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  background: rgba(200, 169, 106, 0.12);
+  color: var(--color-gold-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
+.office-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-sm);
+}
+
+.office-card__detail {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  margin-bottom: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
+
+.office-card__detail i {
+  color: var(--color-gold);
+  margin-top: 3px;
+}
+
+/* ---- Form + Map section ---- */
+.contact-page__main {
+  background: var(--color-accent);
+}
+
+.contact-page__main .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+}
+
+.contact-page__map-wrap {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  height: 100%;
+  min-height: 400px;
+}
+
+.contact-page__map-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 1024px) {
+  .contact-page__offices {
+    grid-template-columns: 1fr;
+  }
+  .contact-page__main .container {
+    grid-template-columns: 1fr;
+  }
+}

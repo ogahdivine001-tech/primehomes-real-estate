@@ -1,0 +1,43 @@
+/* ==========================================================================
+   PrimeHomes Real Estate — Shared Keyframe Animations
+   Used across Hero, Loader, buttons, and scroll-reveal effects
+   ========================================================================== */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+@keyframes pulseGold {
+  0%   { box-shadow: 0 0 0 0 rgba(200, 169, 106, 0.45); }
+  70%  { box-shadow: 0 0 0 14px rgba(200, 169, 106, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(200, 169, 106, 0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-fadeInUp { animation: fadeInUp 0.8s var(--ease-luxury) both; }
+.animate-fadeIn { animation: fadeIn 0.6s var(--ease-luxury) both; }
+.animate-float { animation: floatY 4s ease-in-out infinite; }

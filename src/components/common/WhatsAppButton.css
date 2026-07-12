@@ -1,0 +1,51 @@
+/* ==========================================================================
+   WhatsAppButton — floating WhatsApp contact button
+   ========================================================================== */
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25d366;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+  z-index: 900;
+  transition: transform var(--transition-fast);
+}
+
+.whatsapp-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #25d366;
+  animation: pulseWhatsapp 2.2s infinite;
+  z-index: -1;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.08);
+}
+
+@keyframes pulseWhatsapp {
+  0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  70%  { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@media (max-width: 640px) {
+  .whatsapp-button {
+    bottom: 20px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+    font-size: 1.4rem;
+  }
+}

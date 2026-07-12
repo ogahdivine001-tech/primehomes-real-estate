@@ -1,0 +1,133 @@
+/* ==========================================================================
+   Services — full services page
+   ========================================================================== */
+
+.services-page__hero {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  padding-block: calc(var(--header-height) + var(--space-lg)) var(--space-xl);
+  text-align: center;
+}
+
+.services-page__hero h1 {
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+}
+
+.services-page__hero p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.service-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+  padding-block: var(--space-2xl);
+  scroll-margin-top: calc(var(--header-height) + 20px);
+}
+
+.service-detail:not(:last-child) {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.service-detail--reverse .service-detail__media {
+  order: 2;
+}
+
+.service-detail__icon {
+  width: 68px;
+  height: 68px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: var(--space-md);
+}
+
+.service-detail__content h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.service-detail__content p {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-bottom: var(--space-md);
+}
+
+.service-detail__media {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+}
+
+.service-detail__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---- Process steps ---- */
+.services-process {
+  background: var(--color-accent);
+}
+
+.services-process__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  counter-reset: step;
+}
+
+.services-process__step {
+  text-align: center;
+  position: relative;
+}
+
+.services-process__step-number {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-gold);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  margin-bottom: var(--space-sm);
+}
+
+.services-process__step h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.services-process__step p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 900px) {
+  .service-detail {
+    grid-template-columns: 1fr;
+  }
+  .service-detail--reverse .service-detail__media {
+    order: 0;
+  }
+  .services-process__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .services-process__grid {
+    grid-template-columns: 1fr;
+  }
+}

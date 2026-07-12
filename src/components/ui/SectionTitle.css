@@ -1,0 +1,59 @@
+/* ==========================================================================
+   SectionTitle — shared heading block for every section
+   ========================================================================== */
+
+.section-title {
+  max-width: 680px;
+  margin-bottom: var(--space-xl);
+}
+
+.section-title--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-title--left {
+  text-align: left;
+}
+
+.section-title__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-gold);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+}
+
+.section-title--center .section-title__eyebrow {
+  justify-content: center;
+  width: 100%;
+}
+
+.section-title__eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+.section-title__heading {
+  margin-bottom: var(--space-xs);
+}
+
+.section-title__subtitle {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.section-title--light .section-title__heading {
+  color: var(--color-white);
+}
+
+.section-title--light .section-title__subtitle {
+  color: rgba(255, 255, 255, 0.75);
+}

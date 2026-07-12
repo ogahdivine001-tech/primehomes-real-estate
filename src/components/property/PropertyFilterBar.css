@@ -1,0 +1,123 @@
+/* ==========================================================================
+   PropertyFilterBar — full advanced search/filter form
+   Used standalone on the homepage (elevated glass card) and embedded
+   (flat, inline) at the top of the Properties listing page.
+   ========================================================================== */
+
+.filter-bar {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-lg);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-sm);
+  align-items: end;
+}
+
+.filter-bar--embedded {
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  padding: var(--space-md);
+}
+
+.filter-bar__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.filter-bar__field label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+}
+
+.filter-bar__field .filter-bar__control {
+  position: relative;
+}
+
+.filter-bar__field input,
+.filter-bar__field select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-accent);
+  border: 1px solid transparent;
+  font-size: 0.92rem;
+  color: var(--color-text);
+  transition: border-color var(--transition-fast);
+}
+
+.filter-bar__field input:focus,
+.filter-bar__field select:focus {
+  border-color: var(--color-gold);
+}
+
+.filter-bar__field i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+  font-size: 0.8rem;
+}
+
+.filter-bar__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.25rem;
+  font-weight: 600;
+  height: 46px;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.filter-bar__submit:hover {
+  background: var(--color-gold);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+/* Section wrapper on the homepage: pulls the card up to slightly
+   overlap the hero's bottom edge — a common luxury real estate pattern */
+.property-search-section {
+  position: relative;
+  margin-top: -110px;
+  z-index: 5;
+  padding-bottom: var(--space-2xl);
+}
+
+@media (max-width: 1200px) {
+  .filter-bar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .filter-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .filter-bar__submit {
+    grid-column: span 2;
+  }
+  .property-search-section {
+    margin-top: -60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-bar {
+    grid-template-columns: 1fr;
+  }
+  .filter-bar__submit {
+    grid-column: span 1;
+  }
+}

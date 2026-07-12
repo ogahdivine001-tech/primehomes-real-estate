@@ -1,0 +1,88 @@
+/* ==========================================================================
+   PrimeHomes Real Estate — Design Tokens
+   Central source of truth for colors, typography, spacing, shadows, etc.
+   ========================================================================== */
+
+:root {
+  /* ---- Brand Colors ---- */
+  --color-primary: #0d1b2a;       /* Deep navy — headers, dark sections, footer */
+  --color-primary-light: #16283d; /* Lighter navy for gradients/hover states */
+  --color-gold: #c8a96a;          /* Signature luxury gold accent */
+  --color-gold-light: #d9c295;
+  --color-gold-dark: #b3924f;
+  --color-accent: #f5f5f5;        /* Soft off-white background */
+  --color-white: #ffffff;
+  --color-text: #333333;          /* Body copy */
+  --color-text-muted: #6b7280;
+  --color-border: #e6e6e6;
+
+  /* ---- Semantic / Feedback ---- */
+  --color-success: #2e7d32;
+  --color-error: #c0392b;
+
+  /* ---- Glassmorphism ---- */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-bg-dark: rgba(13, 27, 42, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --glass-blur: blur(16px);
+
+  /* ---- Typography ---- */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --fs-h1: clamp(2.5rem, 5vw, 4.5rem);
+  --fs-h2: clamp(2rem, 4vw, 3rem);
+  --fs-h3: clamp(1.5rem, 3vw, 2rem);
+  --fs-h4: clamp(1.125rem, 2vw, 1.5rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+
+  /* ---- Spacing scale (rem) ---- */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+
+  /* ---- Layout ---- */
+  --container-max: 1320px;
+  --container-padding: clamp(1.25rem, 5vw, 3rem);
+  --header-height: 88px;
+
+  /* ---- Radius ---- */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 999px;
+
+  /* ---- Shadows (soft, luxury) ---- */
+  --shadow-sm: 0 2px 8px rgba(13, 27, 42, 0.06);
+  --shadow-md: 0 8px 24px rgba(13, 27, 42, 0.10);
+  --shadow-lg: 0 20px 48px rgba(13, 27, 42, 0.14);
+  --shadow-gold: 0 10px 30px rgba(200, 169, 106, 0.35);
+
+  /* ---- Transitions ---- */
+  --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.2s var(--ease-luxury);
+  --transition-base: 0.4s var(--ease-luxury);
+  --transition-slow: 0.7s var(--ease-luxury);
+
+  /* ---- Z-index scale ---- */
+  --z-header: 1000;
+  --z-overlay: 1100;
+  --z-modal: 1200;
+  --z-toast: 1300;
+}
+
+/* ---- Dark Mode Overrides ---- */
+[data-theme='dark'] {
+  --color-accent: #0f1f30;
+  --color-white: #10202f;
+  --color-text: #e8e8e8;
+  --color-text-muted: #a2acb8;
+  --color-border: #24384a;
+  --glass-bg: rgba(13, 27, 42, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
