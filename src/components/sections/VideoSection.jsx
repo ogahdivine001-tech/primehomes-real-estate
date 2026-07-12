@@ -73,7 +73,7 @@ export default function VideoSection() {
                 <i className="fa-solid fa-xmark" aria-hidden="true" />
               </button>
               <video
-                src="/src/assets/videos/company-intro.mp4"
+                src="/videos/company-intro.mp4"
                 controls
                 autoPlay
                 playsInline

@@ -22,7 +22,7 @@
       rgba(13, 27, 42, 0.65) 45%,
       rgba(13, 27, 42, 0.95) 100%
     ),
-    url("/src/assets/images/hero-bg.jpg");
+    url("/images/hero-bg.jpg");
   background-size: cover;
   background-position: center;
   /* Subtle luxury fallback gradient shows even before/without a real photo */

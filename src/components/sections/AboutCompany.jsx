@@ -45,7 +45,7 @@ export default function AboutCompany() {
         >
           <div className="about-company__img-main">
             <img
-              src="/src/assets/images/about-office.jpg"
+              src="/images/about-office.jpg"
               alt="PrimeHomes Real Estate office and leadership team"
               loading="lazy"
             />
@@ -93,7 +93,7 @@ export default function AboutCompany() {
 
             <div className="about-company__signature">
               <img
-                src="/src/assets/images/agents/founder.jpg"
+                src="/images/agents/founder.jpg"
                 alt="Portrait of PrimeHomes founder"
                 loading="lazy"
               />

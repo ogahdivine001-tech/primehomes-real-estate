@@ -11,7 +11,7 @@
   overflow: hidden;
   background-image:
     linear-gradient(180deg, rgba(13, 27, 42, 0.55) 0%, rgba(13, 27, 42, 0.75) 100%),
-    url('/src/assets/images/video-poster.jpg');
+    url('/images/video-poster.jpg');
   background-size: cover;
   background-position: center;
   background-color: var(--color-primary);
