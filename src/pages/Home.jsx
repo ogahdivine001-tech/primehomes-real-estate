@@ -8,7 +8,6 @@ import ServicesSection from "../components/sections/ServicesSection.jsx";
 import FeaturedLocations from "../components/sections/FeaturedLocations.jsx";
 import MeetOurAgents from "../components/sections/MeetOurAgents.jsx";
 import Testimonials from "../components/sections/Testimonials.jsx";
-import VideoSection from "../components/sections/VideoSection.jsx";
 import GallerySection from "../components/sections/GallerySection.jsx";
 import BlogSection from "../components/sections/BlogSection.jsx";
 import FAQSection from "../components/sections/FAQSection.jsx";
@@ -38,7 +37,6 @@ export default function Home() {
       <FeaturedLocations />
       <MeetOurAgents />
       <Testimonials />
-      <VideoSection />
       <GallerySection />
       <BlogSection />
       <FAQSection />
